@@ -1,0 +1,7 @@
+type: string
+enum:
+  - WEIGHT_LOSS
+  - MUSCLE_GAIN
+  - IMPROVE_DIGESION
+  - GENERAL_HEALTH_ENVOLVING
+}
