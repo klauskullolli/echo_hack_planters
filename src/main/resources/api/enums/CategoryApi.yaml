@@ -1,0 +1,6 @@
+type: string
+enum:
+  - BREAKFAST
+  - DINNER
+  - LUNCH
+  - SNACK

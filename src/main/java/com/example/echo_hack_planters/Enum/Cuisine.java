@@ -5,5 +5,5 @@ public enum Cuisine {
     MEXICAN,
     ALBANIAN,
     KOREAN,
-    MEDITERRANEA;
+    MEDITERRIAN;
 }

@@ -13,11 +13,11 @@ paths:
 components:
   schemas:
     UserApi:
-      $ref: "./api/components/UserApi.yaml"
+      $ref: "./api/components/User.yaml"
     RegisterUserApi:
-      $ref: "./api/components/RegisterUserApi.yaml"
+      $ref: "./api/components/RegisterUser.yaml"
     AddressApi:
-      $ref: "./api/components/AddressApi.yaml"
+      $ref: "./api/components/Address.yaml"
     BusinessApi:
       $ref: "./api/components/BusinessApi.yaml"
     QuizApi:

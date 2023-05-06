@@ -16,4 +16,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../components/UserApi.yaml"
+            $ref: "../components/User.yaml"

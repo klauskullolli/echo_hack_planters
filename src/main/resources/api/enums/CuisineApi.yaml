@@ -1,0 +1,8 @@
+type: string
+enum:
+  - ITALIAN
+  - MEXICAN
+  - ALBANIAN
+  - KOREAN
+  - MEDITERRIAN
+}
