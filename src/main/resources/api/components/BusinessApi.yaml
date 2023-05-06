@@ -1,0 +1,14 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  NIPT:
+    type: string
+  unitCost:
+    type: number
+  provider:
+    $ref: "UserApi.yaml"
+  address:
+    $ref: "AddressApi.yaml"
+description: BusinessApi model.

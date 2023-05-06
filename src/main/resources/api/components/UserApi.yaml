@@ -2,7 +2,7 @@ type: object
 properties:
   id:
     type: integer
-    format: int64
+    format: int32
   name:
     type: string
   surname:
@@ -12,7 +12,7 @@ properties:
   role:
     type: string
   address:
-    type: string
+    $ref: "AddressApi.yaml"
   business:
     type: string
 description: User API.

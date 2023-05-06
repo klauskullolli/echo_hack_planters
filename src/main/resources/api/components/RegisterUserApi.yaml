@@ -14,7 +14,7 @@ properties:
   quiz:
     type: string
   address:
-    type: string
+    $ref: "AddressApi.yaml"
   business:
     type: string
 required:
