@@ -2,6 +2,7 @@ package com.example.echo_hack_planters.model;
 
 
 import com.example.echo_hack_planters.Enum.OrderStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,15 @@ public class Order {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "order")
     private List<OrderMeal> orderMeals =  new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    @JoinColumn(name = "user_id")
+    private User client;
+
+    @ManyToOne
+    @JoinColumn(name = "business_id")
+    private Business provider;
 
 
 }

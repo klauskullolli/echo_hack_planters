@@ -59,6 +59,9 @@ public class User {
     @JsonIgnore
     private Business business;
 
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
+    private  List<Order> orders = new ArrayList<>();
+
 //
 //
 //    @OneToOne(fetch = FetchType.LAZY, orphanRemoval = true)

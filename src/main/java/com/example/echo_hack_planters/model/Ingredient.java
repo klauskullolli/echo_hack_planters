@@ -24,20 +24,16 @@ public class Ingredient {
 
     private String name;
 
-    private  boolean CO2Coefficient;
+    private double amount;
 
-    @ManyToMany(mappedBy = "ingredients", fetch = FetchType.EAGER)
-    private  List<Nutrition> nutritions = new ArrayList<>();
+    private String unit;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "meal_ingredients",
+    private  double CO2Coefficient;
 
-            joinColumns =
-                    {@JoinColumn(name = "ingredient_id")},
-            inverseJoinColumns =
-                    {@JoinColumn(name = "meal_id")})
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "meal_id")
     @JsonIgnore
-    private  List<Meal> meals = new ArrayList<>() ;
+    private Meal meal;
 
 
 }

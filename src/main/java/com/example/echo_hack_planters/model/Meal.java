@@ -4,6 +4,7 @@ import com.example.echo_hack_planters.Enum.Category;
 import com.example.echo_hack_planters.Enum.Cuisine;
 import com.example.echo_hack_planters.Enum.HealthGoal;
 import com.example.echo_hack_planters.Enum.Preferences;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,10 @@ public class Meal {
 
     private double price;
 
+    private double calories;
+
+    private String description;
+
     @Enumerated(value = EnumType.STRING)
     private Cuisine cuisine ;
 
@@ -43,14 +48,20 @@ public class Meal {
 
     private HealthGoal healthGoal ;
 
-    private  boolean CO2Coefficient;
+    private  double CO2Coefficient;
 
 
-    @ManyToMany(mappedBy = "meals", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "meal", fetch = FetchType.LAZY)
     private List<Ingredient> ingredients =  new ArrayList<>();
 
 
+    @OneToMany(mappedBy = "meal", fetch = FetchType.EAGER)
+    private  List<Nutrition> nutritions = new ArrayList<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "business_id")
+    @JsonIgnore
+    private Business business;
 
 
 }

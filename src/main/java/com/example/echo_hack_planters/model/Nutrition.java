@@ -21,18 +21,16 @@ public class Nutrition {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    private double amount;
+
+    private String unit;
+
     private String name ;
 
     private  boolean CO2Coefficient;
 
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "nutrition_ingredients",
-
-            joinColumns =
-                    {@JoinColumn(name = "nutrition_id")},
-            inverseJoinColumns =
-                    {@JoinColumn(name = "ingredient_id")})
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "meal_id")
     @JsonIgnore
-    private  List<Ingredient> ingredients = new ArrayList<>();
+    private Meal meal;
 }

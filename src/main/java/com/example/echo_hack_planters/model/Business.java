@@ -33,6 +33,12 @@ public class Business {
     @JoinColumn(name = "address_id")
     private Address address;
 
+    @OneToMany(mappedBy = "business", fetch = FetchType.LAZY)
+    private List<Meal> meals =  new ArrayList<>();
+
+    @OneToMany(mappedBy = "provider", fetch = FetchType.LAZY)
+    private  List<Order> orders = new ArrayList<>();
+
 //    @OneToMany(mappedBy = "business", cascade = CascadeType.ALL)
 //    private  List<MealBusiness> meals =  new ArrayList<>() ;
 
