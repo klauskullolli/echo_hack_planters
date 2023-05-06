@@ -1,0 +1,7 @@
+type: object
+properties:
+  firstname:
+    type: string
+  lastname:
+    type: string
+description: User API.

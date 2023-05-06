@@ -1,0 +1,16 @@
+openapi: 3.0.1
+info:
+  title: CRUD Demo
+  description: CRUD Demo
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+
+paths:
+  /users/{userId}:
+    $ref: "./api/paths/users.yaml"
+components:
+  schemas:
+    UserApi:
+      $ref: "./api/components/UserApi.yaml"

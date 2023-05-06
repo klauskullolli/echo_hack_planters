@@ -1,0 +1,19 @@
+get:
+  tags:
+    - user
+  description: Get User by Id
+  operationId: getUserById
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    "200":
+      description: Successful operation.
+      content:
+        application/json:
+          schema:
+            $ref: "../components/UserApi.yaml"
