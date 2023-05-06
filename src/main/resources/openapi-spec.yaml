@@ -14,3 +14,5 @@ components:
   schemas:
     UserApi:
       $ref: "./api/components/UserApi.yaml"
+    RegisterUserApi:
+      $ref: "./api/components/RegisterUserApi.yaml"

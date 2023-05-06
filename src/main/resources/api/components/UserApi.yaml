@@ -1,7 +1,18 @@
 type: object
 properties:
-  firstname:
+  id:
+    type: integer
+    format: int64
+  name:
     type: string
-  lastname:
+  surname:
     type: string
+  email:
+    type: string
+  role:
+    type: string
+  address:
+    type:
+  business:
+    type:
 description: User API.

@@ -1,0 +1,26 @@
+type: object
+properties:
+  name:
+    type: string
+  surname:
+    type: string
+  email:
+    type: string
+    format: email
+  password:
+    type: string
+  role:
+    type: string
+  quiz:
+    type:
+  address:
+    type:
+  business:
+    type:
+  required:
+    - name
+    - surname
+    - email
+    - password
+    - address
+description: Register User model.
