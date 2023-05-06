@@ -12,15 +12,15 @@ properties:
   role:
     type: string
   quiz:
-    type:
+    type: string
   address:
-    type:
+    type: string
   business:
-    type:
-  required:
-    - name
-    - surname
-    - email
-    - password
-    - address
+    type: string
+required:
+  - name
+  - surname
+  - email
+  - password
+  - address
 description: Register User model.
