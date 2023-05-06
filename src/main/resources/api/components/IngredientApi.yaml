@@ -1,0 +1,17 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  name:
+    type: string
+  CO2Coefficient:
+    type: boolean
+  nutritions:
+    type: array
+    properties:
+      length:
+        type: integer
+    items:
+      $ref: "NutritionApi.yaml"
+description: IngredientApi model.

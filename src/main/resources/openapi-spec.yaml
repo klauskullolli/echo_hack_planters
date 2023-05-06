@@ -22,3 +22,9 @@ components:
       $ref: "./api/components/BusinessApi.yaml"
     QuizApi:
       $ref: "./api/components/QuizApi.yaml"
+    NutritionApi:
+      $ref: "./api/components/NutritionApi.yaml"
+    IngredientApi:
+      $ref: "./api/components/IngredientApi.yaml"
+    MealApi:
+      $ref: "./api/components/MealApi.yaml"
